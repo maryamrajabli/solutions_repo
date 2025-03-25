@@ -49,8 +49,8 @@ These factors interact to produce a variety of possible outcomes and open doors 
   - Complementary angles (e.g., 30° and 60°) yield the **same range**
 
 - Understand how:
-  - Increasing $ v_0 $ increases range
-  - Increasing $ g $ reduces range
+  - Increasing $v_0$ increases range
+  - Increasing $g$ reduces range
 
 ---
 
