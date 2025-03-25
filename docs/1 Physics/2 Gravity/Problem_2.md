@@ -130,7 +130,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![Orbital Radius](/docs/_pics/KeplersThirdLaw.png)
+![Orbital Radius / Orbital Period Squared](/docs/_pics/KeplersThirdLaw.png)
 
 ### 5. Importance in Space Exploration
 
