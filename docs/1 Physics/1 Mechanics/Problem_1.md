@@ -32,9 +32,7 @@ These factors interact to produce a variety of possible outcomes and open doors 
 - Begin with Newton’s equations to derive the projectile motion formula.
 - Focus on the **range equation**:
 
-  $$
-  R = \frac{v_0^2 \sin(2\theta)}{g}
-  $$
+  $$ R = \frac{v_0^2 \sin(2\theta)}{g}$$
 
 - Discuss how different values of $v_0$ and $g$ change the outcome.
 

@@ -21,12 +21,11 @@ When a payload is released from a moving rocket near Earth, its future motion de
 
 The object follows Newton’s Law of Gravitation:
 
-$
-\vec{F} = -\frac{GMm}{r^2} \hat{r}$
+$$\vec{F} = -\frac{GMm}{r^2} \hat{r}$$
 
 Resulting in the acceleration:
 
-$\vec{a} = -\frac{GM}{r^2} \hat{r}$
+$$\vec{a} = -\frac{GM}{r^2} \hat{r}$$
 
 Where:
 
