@@ -81,4 +81,4 @@ plt.grid()
 plt.show()
 ```
 
-![velocity](/docs/_pics/velocities.png)
+![velocity](velocities.png)

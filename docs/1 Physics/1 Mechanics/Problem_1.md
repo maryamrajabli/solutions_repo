@@ -98,4 +98,4 @@ plt.show()
 
 ```
 
-![Projectile motion](/docs/_pics/download.png)
+![Projectile motion](download.png)
