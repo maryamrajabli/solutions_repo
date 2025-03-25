@@ -16,9 +16,9 @@ Despite its apparent simplicity, this motion is governed by:
 
 - Linear and quadratic kinematic relationships
 - Free parameters like:
-  - Initial velocity $ v_0 $
-  - Gravitational acceleration $ g $
-  - Launch angle $ \theta $
+  - Initial velocity $v_0$
+  - Gravitational acceleration $g$
+  - Launch angle $\theta$
   - (Optional) Launch height
 
 These factors interact to produce a variety of possible outcomes and open doors to creative and scientific exploration.
@@ -42,10 +42,10 @@ These factors interact to produce a variety of possible outcomes and open doors 
 
 ### 2. Analysis of the Range
 
-- Examine how the **range** $R$ varies with the **angle of projection** $ theta $.
+- Examine how the **range** $R$ varies with the **angle of projection** $theta$.
 - Observe and interpret the symmetry of the plot:
 
-  - $ theta = 45^\circ $ yields **maximum range**
+  - $\theta = 45^\circ$ yields **maximum range**
   - Complementary angles (e.g., 30° and 60°) yield the **same range**
 
 - Understand how:
