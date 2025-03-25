@@ -6,9 +6,7 @@
 
 The equation of motion for a forced damped pendulum is:
 
-$$
-\frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \sin\theta = A \cos(\omega t)
-$$
+$$ \frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \sin\theta = A \cos(\omega t )$$
 
 Where:
 
@@ -20,7 +18,7 @@ Where:
 
 ### Small-Angle Approximation
 
-For small angles, $\sin(\theta) \approx \theta $. The equation becomes:
+For small angles, $ \sin(\theta)$ $\approx$ $\theta $. The equation becomes:
 
 $$
 \frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t)

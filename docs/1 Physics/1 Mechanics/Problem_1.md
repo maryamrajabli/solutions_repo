@@ -42,10 +42,10 @@ These factors interact to produce a variety of possible outcomes and open doors 
 
 ### 2. Analysis of the Range
 
-- Examine how the **range** $R$ varies with the **angle of projection** $ \theta $.
+- Examine how the **range** $R$ varies with the **angle of projection** $ theta $.
 - Observe and interpret the symmetry of the plot:
 
-  - $ \theta = 45^\circ $ yields **maximum range**
+  - $ theta = 45^\circ $ yields **maximum range**
   - Complementary angles (e.g., 30° and 60°) yield the **same range**
 
 - Understand how:
