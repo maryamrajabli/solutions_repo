@@ -30,11 +30,9 @@ The third cosmic velocity is the velocity needed for an object to escape the gra
 
 ### 3.1 Escape Velocity Formula
 
-The escape velocity $(v_e)$ from a celestial body is given by the formula:
+The escape velocity $v_e$ from a celestial body is given by the formula:
 
-$$
-v_e = \sqrt{\frac{2GM}{R}}
-$$
+$$v_e = \sqrt{\frac{2GM}{R}}$$
 
 Where:
 
@@ -44,7 +42,7 @@ Where:
 
 ### 3.2 Orbital Velocity (First Cosmic Velocity)
 
-For a circular orbit, the orbital velocity $ v_o $ is:
+For a circular orbit, the orbital velocity $v_o$ is:
 
 $$v_o=\sqrt{\frac{GM}{R}}$$
 

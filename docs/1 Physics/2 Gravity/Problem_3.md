@@ -33,7 +33,7 @@ Where:
 - $M =$ mass of Earth
 - $r =$ distance from Earth’s center
 
-The total energy $ E $ of the system determines the type of trajectory:
+The total energy $E$ of the system determines the type of trajectory:
 
 - $E < 0$ → **Elliptical Orbit**
 - $E = 0$ → **Parabolic Escape**
