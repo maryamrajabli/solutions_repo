@@ -96,4 +96,4 @@ plt.show()
 
 ```
 
-![Projectile motion](download.png)
+![Output](download.png)

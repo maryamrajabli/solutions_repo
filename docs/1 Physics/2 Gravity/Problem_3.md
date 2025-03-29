@@ -97,4 +97,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-![Trajectories of a Freely Released Payload Near Earth](Gravitypr3.png)
+![Output](Gravitypr3.png)

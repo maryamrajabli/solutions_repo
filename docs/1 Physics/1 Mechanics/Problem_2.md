@@ -18,7 +18,7 @@ Where:
 
 ### Small-Angle Approximation
 
-For small angles, $ \sin(\theta)$ $\approx$ $\theta $. The equation becomes:
+For small angles, $\sin(\theta)$ $\approx$ $\theta$. The equation becomes:
 
 $$
 \frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t)
@@ -79,4 +79,4 @@ plt.grid()
 plt.show()
 ```
 
-![velocity](velocities.png)
+![Output](velocities.png)

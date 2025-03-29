@@ -66,7 +66,7 @@ plt.legend()
 plt.show()
 ```
 
-![Pendulum](gravityp1.png)
+![Output](gravityp1.png)
 
 ### Real-World Implications
 
