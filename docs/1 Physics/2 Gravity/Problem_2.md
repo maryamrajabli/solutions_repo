@@ -30,7 +30,7 @@ The third cosmic velocity is the velocity needed for an object to escape the gra
 
 ### 3.1 Escape Velocity Formula
 
-The escape velocity $( v_e)$ from a celestial body is given by the formula:
+The escape velocity $(v_e)$ from a celestial body is given by the formula:
 
 $$
 v_e = \sqrt{\frac{2GM}{R}}
@@ -38,15 +38,15 @@ $$
 
 Where:
 
-- $ G $ is the gravitational constant ($ 6.67430 \times 10^{-11} \, \text{m}^3 \, \text{kg}^{-1} \, \text{s}^{-2} $),
-- $ M $ is the mass of the celestial body,
-- $ R $ is the radius of the celestial body.
+- $G$ is the gravitational constant ($ 6.67430 \times 10^{-11} \, \text{m}^3 \, \text{kg}^{-1} \, \text{s}^{-2} $),
+- $M$ is the mass of the celestial body,
+- $R$ is the radius of the celestial body.
 
 ### 3.2 Orbital Velocity (First Cosmic Velocity)
 
 For a circular orbit, the orbital velocity $ v_o $ is:
 
-$$ v_o = \sqrt{\frac{GM}{R}} $$
+$$v_o=\sqrt{\frac{GM}{R}}$$
 
 This is the speed required to stay in orbit without falling into the celestial body.
 
@@ -54,12 +54,12 @@ This is the speed required to stay in orbit without falling into the celestial b
 
 The third cosmic velocity $v_3$ is the velocity required to escape the entire solar system (or a stellar system) and is given by:
 
-$$ v*3 = \sqrt{\frac{2GM*{sun}}{R}} $$
+$$v*3 = \sqrt{\frac{2GM*{sun}}{R}}$$
 
 Where:
 
-- $ M\_{sun}$ is the mass of the Sun (or the central star of the system),
-- $ R $ is the distance from the object to the center of the solar system.
+- $M\_{sun}$ is the mass of the Sun (or the central star of the system),
+- $R$ is the distance from the object to the center of the solar system.
 
 ## 4. Implementation and Visualization in Python
 

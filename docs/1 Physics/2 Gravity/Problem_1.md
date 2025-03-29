@@ -6,7 +6,7 @@
 
 Kepler's Third Law states that the square of the orbital period (T) is proportional to the cube of the semi-major axis (r) of the orbit:
 
-$$ T^2 \propto r^3 $$
+$$T^2 \propto r^3$$
 
 This fundamental principle is used to describe the motion of celestial bodies in a gravitational field. We derive this relationship from Newtonian mechanics and apply it to real-world scenarios.
 
@@ -14,7 +14,7 @@ This fundamental principle is used to describe the motion of celestial bodies in
 
 For a small mass m orbiting a much larger mass M in a circular orbit, the gravitational force provides the necessary centripetal force:
 
-$$ F_g = F_c $$
+$$F_g = F_c$$
 
 Using Newton’s Law of Universal Gravitation:
 
@@ -22,7 +22,7 @@ $$\frac{GMm}{r^2} = \frac{m v^2}{r}$$
 
 Since orbital velocity is given by:
 
-$$ v = \frac{2\pi r}{T} $$
+$$v = \frac{2\pi r}{T}$$
 
 Substituting this into the equation:
 
@@ -30,7 +30,7 @@ $$\frac{GMm}{r^2} = \frac{m}{r} \left(\frac{4\pi^2 r^2}{T^2}\right)$$
 
 Simplifying:
 
-$$ T^2 = \frac{4\pi^2 r^3}{GM} $$
+$$T^2 = \frac{4\pi^2 r^3}{GM}$$
 
 which confirms the relationship $ T^2 \propto r^3 $.
 

@@ -29,15 +29,15 @@ $$\vec{a} = -\frac{GM}{r^2} \hat{r}$$
 
 Where:
 
-- $ G = 6.67430 \times 10^{-11} \, \text{Nm}^2/\text{kg}^2$
-- $ M = $ mass of Earth
-- $ r = $ distance from Earth’s center
+- $G = 6.67430 \times 10^{-11} \, \text{Nm}^2/\text{kg}^2$
+- $M =$ mass of Earth
+- $r =$ distance from Earth’s center
 
 The total energy $ E $ of the system determines the type of trajectory:
 
-- $ E < 0 $ → **Elliptical Orbit**
-- $ E = 0 $ → **Parabolic Escape**
-- $ E > 0 $ → **Hyperbolic Escape**
+- $E < 0$ → **Elliptical Orbit**
+- $E = 0$ → **Parabolic Escape**
+- $E > 0$ → **Hyperbolic Escape**
 
 ---
 

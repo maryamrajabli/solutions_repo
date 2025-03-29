@@ -20,9 +20,7 @@ Where:
 
 For small angles, $\sin(\theta)$ $\approx$ $\theta$. The equation becomes:
 
-$$
-\frac{d^2\theta}{dt^2} + \gamma \frac{d\theta}{dt} + \omega_0^2 \theta = A \cos(\omega t)
-$$
+$$\frac{d^2\theta}{dt^2} + \gamma\frac{d\theta}{dt} + \omega_0^2\theta = A \cos(\omega t)$$
 
 This is a linear second-order differential equation with periodic forcing.
 
