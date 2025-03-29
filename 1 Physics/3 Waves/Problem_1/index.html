@@ -172,6 +172,91 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="interference-patterns-from-multiple-wave-sources">Interference Patterns from Multiple Wave Sources</h1>
+<h2 id="motivation">Motivation</h2>
+<p>When multiple wave sources interact, the resulting pattern reveals the rich behavior of <strong>wave interference</strong>. This phenomenon is central to understanding light, sound, and even quantum behavior. By studying how waves from different sources superimpose on a water surface, we explore <strong>constructive</strong> and <strong>destructive interference</strong>, which form beautiful and physically meaningful patterns.</p>
+<p>This simulation offers a hands-on way to <strong>visualize</strong> and <strong>understand</strong> the effects of phase relationships and spatial arrangement on interference, laying a foundation for real-world applications like <strong>antenna design</strong>, <strong>acoustics</strong>, and <strong>optics</strong>.</p>
+<hr/>
+<h2 id="objective">Objective</h2>
+<ul>
+<li>Analyze interference from <strong>coherent wave sources</strong> placed at the vertices of a <strong>regular polygon</strong> (e.g., square).</li>
+<li>Apply the <strong>principle of superposition</strong> to calculate total displacement at any point.</li>
+<li>Use simulation to <strong>visualize regions</strong> of constructive and destructive interference.</li>
+<li>Understand the influence of <strong>geometric symmetry</strong> on wave interaction.</li>
+</ul>
+<hr/>
+<h2 id="theoretical-foundation">Theoretical Foundation</h2>
+<h3 id="circular-wave-equation">Circular Wave Equation</h3>
+<p>A circular wave from a single point source is modeled as:</p>
+<div class="arithmatex">\[
+y(x, y, t) = A \sin(kr - \omega t + \phi)
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\(A\)</span>: amplitude</li>
+<li><span class="arithmatex">\(r=\sqrt{(x - x_0)^2 + (y - y_0)^2}\)</span>: distance from the source</li>
+<li><span class="arithmatex">\(k =\frac{2\pi}{\lambda}\)</span>: wave number</li>
+<li><span class="arithmatex">\(\omega = 2\pi f\)</span>: angular frequency</li>
+<li><span class="arithmatex">\(\phi\)</span>: initial phase</li>
+</ul>
+<hr/>
+<h3 id="superposition-of-multiple-sources">Superposition of Multiple Sources</h3>
+<p>For <span class="arithmatex">\(N\)</span> coherent sources:</p>
+<div class="arithmatex">\[
+y_{\text{total}}(x, y, t) = \sum_{i=1}^{N} A \sin(k r_i - \omega t)
+\]</div>
+<p>This produces <strong>interference patterns</strong> where wave crests align (constructive) or cancel (destructive).</p>
+<hr/>
+<h3 id="constructive-destructive-interference">Constructive &amp; Destructive Interference</h3>
+<ul>
+<li><strong>Constructive</strong>: <span class="arithmatex">\(\Delta r = m \lambda\)</span> (waves in phase)</li>
+<li><strong>Destructive</strong>: <span class="arithmatex">\(\Delta r = (m + 0.5)\lambda\)</span> (waves out of phase)</li>
+<li>These lead to alternating regions of high and low displacement.</li>
+</ul>
+<hr/>
+<h3 id="polygonal-source-arrangement">Polygonal Source Arrangement</h3>
+<p>Using a <strong>square configuration</strong> ensures symmetry, helping us observe consistent interference patterns. The geometry influences <strong>how and where</strong> constructive and destructive interference occurs.</p>
+<hr/>
+<h2 id="python-simulation-square-configuration">Python Simulation: Square Configuration</h2>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Parameters
+A = 1.0
+λ = 1.0
+f = 1.0
+k = 2 * np.pi / λ
+ω = 2 * np.pi * f
+φ = 0
+t = 0
+
+x = np.linspace(-5, 5, 500)
+y = np.linspace(-5, 5, 500)
+X, Y = np.meshgrid(x, y)
+
+# Square vertices
+R = 2
+num_sources = 4
+angles = np.linspace(0, 2 * np.pi, num_sources, endpoint=False)
+sources = [(R * np.cos(a), R * np.sin(a)) for a in angles]
+
+Z = np.zeros_like(X)
+for (sx, sy) in sources:
+    r = np.sqrt((X - sx)**2 + (Y - sy)**2)
+    Z += A * np.sin(k * r - ω * t + φ)
+
+plt.figure(figsize=(8, 6))
+plt.contourf(X, Y, Z, levels=100, cmap='viridis')
+plt.colorbar(label='Displacement')
+plt.title('Wave Interference Pattern (Square Sources)')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.axis('equal')
+plt.tight_layout()
+plt.show()
+
+</code></pre>
+<p><img alt="Output" src="../Wave%20interference.png"/></p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

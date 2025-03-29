@@ -172,6 +172,165 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="problem-1">Problem 1</h1>
+<h1 id="measuring-earths-gravitational-acceleration-with-a-pendulum">Measuring Earth's Gravitational Acceleration with a Pendulum</h1>
+<h2 id="motivation">Motivation</h2>
+<p>The acceleration due to gravity <span class="arithmatex">\((g)\)</span> is a fundamental constant that influences motion on Earth. One classic method to determine <span class="arithmatex">\((g)\)</span> is through the oscillations of a simple pendulum, where the period of the pendulum depends on the gravitational field strength. This experiment offers hands-on practice in both measurement and uncertainty analysis — core components of experimental physics.</p>
+<hr/>
+<h2 id="objective">Objective</h2>
+<ul>
+<li>Measure the gravitational acceleration <span class="arithmatex">\((g)\)</span> using a pendulum.</li>
+<li>Analyze the uncertainties in length and timing.</li>
+<li>Compare measured <span class="arithmatex">\((g)\)</span> to the accepted value <span class="arithmatex">\((9.81 , text{m/s}^2)\)</span> .</li>
+</ul>
+<hr/>
+<h2 id="materials">Materials</h2>
+<ul>
+<li>String of length: <strong>1.00 m</strong></li>
+<li>Weight: keychain</li>
+<li>Ruler (±1 cm resolution)</li>
+<li>Stopwatch (±0.01 s resolution)</li>
+<li>Support for suspension</li>
+</ul>
+<hr/>
+<h2 id="procedure">Procedure</h2>
+<ul>
+<li>Measured pendulum length:<br/>
+<span class="arithmatex">\([
+  L = 1.00 , \text{m}, \quad \Delta L = \pm 0.005, \text{m}]\)</span></li>
+<li>Conducted 10 measurements of the time for 10 full oscillations:<br/>
+<span class="arithmatex">\(( T_{10} )\)</span> in seconds:<br/>
+<code>20.02, 19.88, 20.15, 20.00, 20.10, 19.95, 20.05, 20.00, 20.08, 19.90</code></li>
+</ul>
+<hr/>
+<h2 id="tabulated-data">Tabulated Data</h2>
+<table>
+<thead>
+<tr>
+<th>Trial</th>
+<th>Time for 10 Oscillations (s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>20.02</td>
+</tr>
+<tr>
+<td>2</td>
+<td>19.88</td>
+</tr>
+<tr>
+<td>3</td>
+<td>20.15</td>
+</tr>
+<tr>
+<td>4</td>
+<td>20.00</td>
+</tr>
+<tr>
+<td>5</td>
+<td>20.10</td>
+</tr>
+<tr>
+<td>6</td>
+<td>19.95</td>
+</tr>
+<tr>
+<td>7</td>
+<td>20.05</td>
+</tr>
+<tr>
+<td>8</td>
+<td>20.00</td>
+</tr>
+<tr>
+<td>9</td>
+<td>20.08</td>
+</tr>
+<tr>
+<td>10</td>
+<td>19.90</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="calculations">Calculations</h2>
+<h3 id="1-calculate-the-period">1. Calculate the period:</h3>
+<p><span class="arithmatex">\([
+T = \frac{\\overline{T}_{10}}{10} = \frac{20.013}{10} = 2.0013, \text{s}, \quad \Delta T = \frac{0.0863}{10} = 0.00863, \text{s}]\)</span></p>
+<h3 id="2-determine-g">2. Determine <span class="arithmatex">\((g)\)</span>:</h3>
+<p><span class="arithmatex">\([g = \frac{4\pi^2 L}{T^2} = \frac{4\\pi^2 \cdot 1.00}{(2.0013)^2} \approx 9.857, \text{m/s}^2]\)</span></p>
+<h3 id="3-propagate-uncertainties">3. Propagate uncertainties:</h3>
+<p><span class="arithmatex">\([\Delta g = g \sqrt{ \left( \frac{\\Delta L}{L} \right)^2 + \left( 2 \cdot \\frac{\Delta T}{T} \right)^2 }]\)</span></p>
+<p><span class="arithmatex">\([\Delta g = 9.857 \cdot \sqrt{ \left( \\frac{0.005}{1.00} \right)^2 + \left( 2 \\cdot \frac{0.0273}{2.0013} \right)^2 } \\approx 0.273, \text{m/s}^2]\)</span></p>
+<hr/>
+<h2 id="final-result">Final Result</h2>
+<p><span class="arithmatex">\([g = (9.857 \pm 0.273), \text{m/s}^2]\)</span></p>
+<hr/>
+<h2 id="python-simulation-of-pendulum-motion">Python Simulation of Pendulum Motion</h2>
+<p>To better understand the relationship between the pendulum’s period and gravity, we simulate the motion using the formula:</p>
+<p><span class="arithmatex">\(\theta(t) = \theta_0 \cos\left(\frac{2\\pi t}{T}\right)\)</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\((\theta_0)\)</span> is the initial angle (in radians)</li>
+<li><span class="arithmatex">\((T = 2\pi \sqrt{L / g})\)</span> is the period</li>
+</ul>
+<hr/>
+<h3 id="python-code">Python Code</h3>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+
+# Simulate simple pendulum period based on L and g
+def pendulum_period(L, g=9.81):
+    return 2 * np.pi * np.sqrt(L / g)
+
+# Simulate oscillation and time trace
+def simulate_pendulum_motion(L, g=9.81, theta0_deg=5, time_max=10, dt=0.01):
+    theta0 = np.radians(theta0_deg)
+    T = pendulum_period(L, g)
+    t = np.arange(0, time_max, dt)
+    theta = theta0 * np.cos(2 * np.pi * t / T)
+    return t, theta, T
+
+# Parameters
+L_sim = 1.0  # length in meters
+g_sim = 9.81  # gravitational acceleration
+t_vals, theta_vals, T_theoretical = simulate_pendulum_motion(L_sim, g_sim)
+
+# Plot the simulated angular displacement vs time
+plt.figure(figsize=(10, 4))
+plt.plot(t_vals, theta_vals)
+plt.title(f"Simulated Pendulum Motion (L = {L_sim} m, g = {g_sim} m/s²)")
+plt.xlabel("Time (s)")
+plt.ylabel("Angular Displacement (rad)")
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+</code></pre>
+<p><img alt="Output" src="../Simulated%20pendulum.png"/></p>
+<h2 id="analysis">Analysis</h2>
+<h3 id="1-comparison">1. Comparison:</h3>
+<ul>
+<li>Measured <span class="arithmatex">\((g)\)</span>: <strong>9.857 m/s²</strong></li>
+<li>Standard <span class="arithmatex">\((g)\)</span>: <strong>9.81 m/s²</strong></li>
+<li>Absolute error: <strong>0.047 m/s²</strong></li>
+<li>Relative error:<br/>
+<span class="arithmatex">\(frac{0.047}{9.81} \times 100\\% \approx 0.48\\%\)</span></li>
+</ul>
+<h3 id="2-discussion">2. Discussion:</h3>
+<ul>
+<li><strong>Effect of ΔL</strong>: The uncertainty in length (±0.005 m) contributed minimally compared to timing uncertainty.</li>
+<li><strong>Effect of ΔT</strong>: Variability in human reaction time causes larger uncertainty in timing. Measuring 10 oscillations helps reduce this.</li>
+<li><strong>Limitations</strong>:</li>
+<li>Small angle approximation must hold (&lt;15°).</li>
+<li>Air resistance and friction at the pivot are ignored.</li>
+<li>Stopwatch precision and user reaction time affect reliability.</li>
+</ul>
+<hr/>
+<h2 id="conclusion">Conclusion</h2>
+<p>Using a basic pendulum and careful timing, we measured the gravitational acceleration as:</p>
+<p><span class="arithmatex">\(\boxed{g = (9.857 \\pm 0.273) \\, \text{m/s}^2}\)</span></p>
+<p>This result agrees well with the standard value, with less than 0.5% error. The experiment highlights how even simple tools — combined with multiple trials and uncertainty analysis — can yield precise and meaningful scientific results.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">

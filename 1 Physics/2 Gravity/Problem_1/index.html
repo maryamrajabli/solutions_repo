@@ -191,19 +191,19 @@
 <h2 id="orbital-period-and-orbital-radius">Orbital Period and Orbital Radius</h2>
 <h3 id="introduction">Introduction</h3>
 <p>Kepler's Third Law states that the square of the orbital period (T) is proportional to the cube of the semi-major axis (r) of the orbit:</p>
-<div class="arithmatex">\[ T^2 \propto r^3 \]</div>
+<div class="arithmatex">\[T^2 \propto r^3\]</div>
 <p>This fundamental principle is used to describe the motion of celestial bodies in a gravitational field. We derive this relationship from Newtonian mechanics and apply it to real-world scenarios.</p>
 <h3 id="derivation">Derivation</h3>
 <p>For a small mass m orbiting a much larger mass M in a circular orbit, the gravitational force provides the necessary centripetal force:</p>
-<div class="arithmatex">\[ F_g = F_c \]</div>
+<div class="arithmatex">\[F_g = F_c\]</div>
 <p>Using Newton’s Law of Universal Gravitation:</p>
 <div class="arithmatex">\[\frac{GMm}{r^2} = \frac{m v^2}{r}\]</div>
 <p>Since orbital velocity is given by:</p>
-<div class="arithmatex">\[ v = \frac{2\pi r}{T} \]</div>
+<div class="arithmatex">\[v = \frac{2\pi r}{T}\]</div>
 <p>Substituting this into the equation:</p>
 <div class="arithmatex">\[\frac{GMm}{r^2} = \frac{m}{r} \left(\frac{4\pi^2 r^2}{T^2}\right)\]</div>
 <p>Simplifying:</p>
-<div class="arithmatex">\[ T^2 = \frac{4\pi^2 r^3}{GM} \]</div>
+<div class="arithmatex">\[T^2 = \frac{4\pi^2 r^3}{GM}\]</div>
 <p>which confirms the relationship $ T^2 \propto r^3 $.</p>
 <h3 id="computational-model">Computational Model</h3>
 <p>We implement a numerical simulation of a circular orbit using Python.</p>
