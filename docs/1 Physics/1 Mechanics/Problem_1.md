@@ -1,73 +1,83 @@
-# Problem 1
+# Problem 1:
 
-## Investigating the Range as a Function of the Angle of Projection
+# Investigating the Range as a Function of the Angle of Projection
 
 ## 1. Problem Statement
 
-The objective of this project is to explore how the **horizontal range** of a projectile varies with the **launch angle**. Though simple at first glance, this classical physics problem reveals deep insights into motion under gravity.
+The aim of this project is to deeply explore how the **horizontal range** of a projectile depends on the **launch angle** $\theta$, assuming no air resistance. Although the range equation looks simple, its implications and derivation offer valuable understanding of 2D motion under gravity.
 
 ---
 
-## Motivation
+## 2. Motivation & Importance
 
-Projectile motion is more than just a textbook topic—it forms the foundation for countless real-world phenomena, from sports to spaceflight.
-
-Despite its apparent simplicity, this motion is governed by:
-
-- Linear and quadratic kinematic relationships
-- Free parameters like:
-  - Initial velocity $v_0$
-  - Gravitational acceleration $g$
-  - Launch angle $\theta$
-  - (Optional) Launch height
-
-These factors interact to produce a variety of possible outcomes and open doors to creative and scientific exploration.
+Projectile motion appears frequently in **engineering, sports, military applications**, and **planetary science**. From designing robotic arms to simulating cannon trajectories or space launches—mastering this topic equips learners with key analytical tools.
 
 ---
 
-## Task Overview
+## 3. Theoretical Foundation
 
-### 1️- Theoretical Foundation
+### 3.1. Assumptions
 
-- Begin with Newton’s equations to derive the projectile motion formula.
-- Focus on the **range equation**:
+To simplify our analysis, we assume:
 
-  $$R = \frac{v_0^2 \sin(2\theta)}{g}$$
-
-- Discuss how different values of $v_0$ and $g$ change the outcome.
-
-- Explain how this results in a _family of parabolic paths_ depending on launch parameters.
+- The projectile is launched from ground level.
+- No air resistance.
+- Constant gravitational acceleration ($g \approx 9.81$ m/s²).
 
 ---
 
-### 2. Analysis of the Range
+### 3.2. Key Equations
 
-- Examine how the **range** $R$ varies with the **angle of projection** $theta$.
-- Observe and interpret the symmetry of the plot:
+#### Horizontal and Vertical Components:
 
-  - $\theta = 45^\circ$ yields **maximum range**
-  - Complementary angles (e.g., 30° and 60°) yield the **same range**
+If the initial velocity is $v_0$ and the launch angle is $\theta$, the velocity components are:
 
-- Understand how:
-  - Increasing $v_0$ increases range
-  - Increasing $g$ reduces range
+$$
+v_{0x} = v_0 \cos(\theta), \quad v_{0y} = v_0 \sin(\theta)
+$$
+
+#### Time of Flight (T):
+
+The projectile returns to the same vertical level when $y(t) = 0$. Using vertical motion:
+
+$$
+y(t) = v_{0y} t - \frac{1}{2} g t^2 = 0 \Rightarrow t = 0 \quad \text{or} \quad t = \frac{2v_0 \sin(\theta)}{g}
+$$
+
+We take the non-zero solution:
+
+$$
+T = \frac{2v_0 \sin(\theta)}{g}
+$$
+
+#### Range (R):
+
+The horizontal distance traveled during this time is:
+
+$$
+R = v_{0x} \cdot T = v_0 \cos(\theta) \cdot \frac{2v_0 \sin(\theta)}{g}
+$$
+
+$$
+\boxed{R = \frac{v_0^2 \sin(2\theta)}{g}}
+$$
+
+> 💡 **Insight**: This equation shows that the range depends on the square of the initial speed and the sine of twice the launch angle.
 
 ---
 
-### 3. Real-World Applications
+### 3.3. Implications of the Range Formula
 
-Projectile motion applies to countless real-life situations:
-
-- **Sports**: Kicking a football, shooting a basketball
-- **Engineering**: Launching projectiles and drones
-- **Space Science**: Modeling launches on the Moon or Mars
-- **Military**: Calculating ballistic paths
-
-These models provide not just theoretical understanding but also practical insights.
+- Maximum range occurs when $\sin(2\theta)$ is maximized ⇒ $2\theta = 90^\circ$ ⇒ $\theta = 45^\circ$.
+- $\sin(2\theta)$ is symmetric about $45^\circ$, so **angles like $30^\circ$ and $60^\circ$ produce equal ranges**.
+- Larger $v_0$ leads to a longer range.
+- Higher $g$ (e.g., on Jupiter) reduces the range.
 
 ---
 
-### 4️. Python Simulation
+## 4. Graphical Analysis
+
+Let’s use Python to plot $R$ vs. $\theta$ for different $v_0$ values.
 
 ```python
 import numpy as np
@@ -77,23 +87,32 @@ def compute_range(v0, theta_deg, g=9.81):
     theta_rad = np.radians(theta_deg)
     return (v0**2 * np.sin(2 * theta_rad)) / g
 
-# Parameters
-angles = np.linspace(0, 90, 100)  # Angles from 0° to 90°
-velocities = [10, 20, 30]         # Different initial velocities in m/s
+angles = np.linspace(0, 90, 100)
+velocities = [10, 20, 30]
 
-# Plotting
-plt.figure(figsize=(8, 6))
+plt.figure(figsize=(9, 6))
 for v in velocities:
     ranges = [compute_range(v, angle) for angle in angles]
     plt.plot(angles, ranges, label=f'v₀ = {v} m/s')
 
-plt.title('Range vs. Launch Angle')
-plt.xlabel('Launch Angle (degrees)')
-plt.ylabel('Range (meters)')
+plt.title('Projectile Range vs. Launch Angle')
+plt.xlabel('Launch Angle θ (degrees)')
+plt.ylabel('Range R (meters)')
 plt.grid(True)
 plt.legend()
+plt.tight_layout()
 plt.show()
 
 ```
 
 ![Output](download.png)
+
+## 5. Real-World Applications
+
+- Sports: Calculating the optimal angle for a football throw.
+
+- Engineering: Determining nozzle angles for sprinkler systems.
+
+- Military: Artillery targeting under various launch conditions.
+
+- Space: Simulating projectile motion on Mars, where $g \approx 3.71$ m/s².
