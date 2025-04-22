@@ -121,9 +121,7 @@ plt.tight_layout()
 
 - The orbital period grows **non-linearly** with radius.
 - This relationship reflects **Kepler’s Third Law**:
-  \[
-  T^2 \propto r^3
-  \]
+  $\T^2 \propto r^3\
 - Farther orbits take longer to complete.
 - Newton’s gravity gives the **mechanism**, and Kepler gives the **relationship**.
 
@@ -141,7 +139,3 @@ plt.tight_layout()
 ## Conclusion
 
 By analyzing this relationship, we connect gravity’s fundamental principles with real-world technologies and cosmic dynamics. Kepler’s Law is not just a historical observation — it’s a **practical tool** for understanding and shaping the universe.
-
-```
-
-```
