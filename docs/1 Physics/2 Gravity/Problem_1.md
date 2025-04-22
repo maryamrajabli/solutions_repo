@@ -117,7 +117,7 @@ plt.tight_layout()
 
 ---
 
-## 🧠 Summary
+## Summary
 
 - The orbital period grows **non-linearly** with radius.
 - This relationship reflects **Kepler’s Third Law**:
@@ -129,7 +129,7 @@ plt.tight_layout()
 
 ---
 
-## 🌍 Real-World Relevance
+## Real-World Relevance
 
 - 🛰️ Satellite network design (e.g., Starlink, GPS)
 - 🌌 Planetary system modeling
@@ -138,7 +138,7 @@ plt.tight_layout()
 
 ---
 
-## ✅ Conclusion
+## Conclusion
 
 By analyzing this relationship, we connect gravity’s fundamental principles with real-world technologies and cosmic dynamics. Kepler’s Law is not just a historical observation — it’s a **practical tool** for understanding and shaping the universe.
 
