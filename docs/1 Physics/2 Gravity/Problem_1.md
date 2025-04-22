@@ -70,6 +70,8 @@ This shows that the orbital period depends on the **cube of the radius**.
 
 ---
 
+### Implementation and Visualization in Python:
+
 ```python
 
 import numpy as np
@@ -121,7 +123,7 @@ plt.tight_layout()
 
 - The orbital period grows **non-linearly** with radius.
 - This relationship reflects **Kepler’s Third Law**:
-  $\T^2 \propto r^3\
+  $$ \T^2 \propto r^3\
 - Farther orbits take longer to complete.
 - Newton’s gravity gives the **mechanism**, and Kepler gives the **relationship**.
 
