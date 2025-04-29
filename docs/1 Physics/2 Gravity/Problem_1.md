@@ -12,13 +12,15 @@ To explore the relationship between the **orbital radius** and the **orbital per
 
 A satellite remains in orbit because gravity supplies the exact force needed to keep it moving in a circular path:
 
-$\frac{G M m}{r^2} = \frac{m v^2}{r}
+$$
+\frac{G M m}{r^2} = \frac{m v^2}{r}
+$$
 
-- \( G \): Gravitational constant
-- \( M \): Mass of Earth
-- \( m \): Mass of satellite
-- \( r \): Distance from Earth’s center (orbital radius)
-- \( v \): Orbital speed
+- $ G $: Gravitational constant
+- $ M $: Mass of Earth
+- $ m $: Mass of satellite
+- $ r $: Distance from Earth’s center (orbital radius)
+- $ v $: Orbital speed
 
 ---
 
@@ -26,9 +28,9 @@ $\frac{G M m}{r^2} = \frac{m v^2}{r}
 
 Solving for velocity:
 
-\[
+$$
 v = \sqrt{\frac{G M}{r}}
-\]
+$$
 
 This is the speed needed for a stable circular orbit.
 
@@ -38,9 +40,9 @@ This is the speed needed for a stable circular orbit.
 
 The time for one full revolution is:
 
-\[
+$$
 T = \frac{2\pi r}{v} = 2\pi \sqrt{\frac{r^3}{G M}}
-\]
+$$
 
 This shows that the orbital period depends on the **cube of the radius**.
 
@@ -50,7 +52,7 @@ This shows that the orbital period depends on the **cube of the radius**.
 
 > “The square of the orbital period is proportional to the cube of the orbital radius.”
 
-\[T^2 \propto r^3\]
+$$T^2 \propto r^3$$
 
 ### Why it matters:
 
@@ -120,7 +122,7 @@ plt.tight_layout()
 
 - The orbital period grows **non-linearly** with radius.
 - This relationship reflects **Kepler’s Third Law**:
-  $ \T^2 \propto r^3\
+  $ T^2 \propto r^3 $
 - Farther orbits take longer to complete.
 - Newton’s gravity gives the **mechanism**, and Kepler gives the **relationship**.
 
