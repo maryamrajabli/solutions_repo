@@ -1,14 +1,20 @@
 # Orbital Period and Orbital Radius – Solution and Concept
 
-## Objective
+## Motivation
 
-To explore the relationship between the **orbital radius** and the **orbital period** of a satellite orbiting Earth using **Newtonian Gravity** and **Kepler’s Third Law**.
+The relationship between the **square of the orbital period** and the **cube of the orbital radius**, known as **Kepler's Third Law**, is a cornerstone of celestial mechanics.
 
----
+This profound yet simple law:
+
+- Helps determine how planets move,
+- Supports the calculation of satellite orbits,
+- Applies to everything from moons to galaxies.
+
+Understanding and verifying this relationship helps connect **gravity’s core principles** to real-world phenomena such as **planetary systems**, **GPS networks**, and **space missions**.
 
 ## Theoretical Background
 
-### 1. **Gravitational Force Provides the Centripetal Force**
+### 1. **Newton's Universal Law of Gravitation**
 
 A satellite remains in orbit because gravity supplies the exact force needed to keep it moving in a circular path:
 
@@ -16,35 +22,41 @@ $$
 \frac{G M m}{r^2} = \frac{m v^2}{r}
 $$
 
-- $ G $: Gravitational constant
-- $ M $: Mass of Earth
-- $ m $: Mass of satellite
-- $ r $: Distance from Earth’s center (orbital radius)
-- $ v $: Orbital speed
+- $G$: Gravitational constant
+- $M$: Mass of Earth
+- $m$: Mass of satellite
+- $r$: Distance from Earth’s center (orbital radius)
+- $v$: Orbital speed
 
 ---
 
 ### 2. **Orbital Velocity**
 
-Solving for velocity:
+In circular orbits, gravity provides the **centripetal force** to keep an object moving in a circle:
 
 $$
-v = \sqrt{\frac{G M}{r}}
+\frac{G M m}{r^2} = \frac{m v^2}{r}
+\Rightarrow v = \sqrt{\frac{G M}{r}}
 $$
-
-This is the speed needed for a stable circular orbit.
 
 ---
 
 ### 3. **Orbital Period**
 
-The time for one full revolution is:
+From velocity and distance:
 
 $$
 T = \frac{2\pi r}{v} = 2\pi \sqrt{\frac{r^3}{G M}}
 $$
 
-This shows that the orbital period depends on the **cube of the radius**.
+So we get:
+
+$$
+T^2 = \frac{4\pi^2}{G M} \cdot r^3
+\Rightarrow T^2 \propto r^3
+$$
+
+This is **Kepler’s Third Law** derived from **Newtonian Mechanics**.
 
 ---
 
@@ -122,25 +134,32 @@ plt.tight_layout()
 
 - The orbital period grows **non-linearly** with radius.
 - This relationship reflects **Kepler’s Third Law**:
-  $ T^2 \propto r^3 $
+  $T^2 \propto r^3$
 - Farther orbits take longer to complete.
 - Newton’s gravity gives the **mechanism**, and Kepler gives the **relationship**.
 
 ---
 
-## Real-World Relevance
+## Real-World Examples
 
-- 🛰️ Satellite network design (e.g., Starlink, GPS)
-- 🌌 Planetary system modeling
-- 🚀 Space exploration route planning
-- 📡 Geostationary vs. polar orbits
+### Moon orbiting Earth
+
+- Radius: ~384,000 km
+- Period: ~27.3 days
+
+Inserting values confirms:  
+$$T^2 \propto r^3$$
+
+### Planets in the Solar System
+
+Use AU and years:
+
+- Earth: $r = 1 \, \text{AU}, T = 1 \, \text{year}$
+- Mars: $r = 1.52 \, \text{AU} \Rightarrow T \approx 1.88 \, \text{years}$
+- Jupiter: $r = 5.2 \, \text{AU} \Rightarrow T \approx 11.86 \, \text{years}$
 
 ---
 
 ## Conclusion
 
 By analyzing this relationship, we connect gravity’s fundamental principles with real-world technologies and cosmic dynamics. Kepler’s Law is not just a historical observation — it’s a **practical tool** for understanding and shaping the universe.
-
-```
-
-```
