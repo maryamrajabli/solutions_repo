@@ -56,11 +56,11 @@
 <ul class="current">
 <li class="toctree-l2 current"><a class="reference internal current" href="#">Orbital Period and Orbital Radius – Solution and Concept</a>
 <ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+<li class="toctree-l3"><a class="reference internal" href="#motivation">Motivation</a>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#theoretical-background">Theoretical Background</a>
 <ul>
-<li class="toctree-l4"><a class="reference internal" href="#1-gravitational-force-provides-the-centripetal-force">1. Gravitational Force Provides the Centripetal Force</a>
+<li class="toctree-l4"><a class="reference internal" href="#1-newtons-universal-law-of-gravitation">1. Newton's Universal Law of Gravitation</a>
 </li>
 <li class="toctree-l4"><a class="reference internal" href="#2-orbital-velocity">2. Orbital Velocity</a>
 </li>
@@ -82,7 +82,13 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#real-world-relevance">Real-World Relevance</a>
+<li class="toctree-l3"><a class="reference internal" href="#real-world-examples">Real-World Examples</a>
+<ul>
+<li class="toctree-l4"><a class="reference internal" href="#moon-orbiting-earth">Moon orbiting Earth</a>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#planets-in-the-solar-system">Planets in the Solar System</a>
+</li>
+</ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#conclusion">Conclusion</a>
 </li>
@@ -202,36 +208,47 @@
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
 <h1 id="orbital-period-and-orbital-radius-solution-and-concept">Orbital Period and Orbital Radius – Solution and Concept</h1>
-<h2 id="objective">Objective</h2>
-<p>To explore the relationship between the <strong>orbital radius</strong> and the <strong>orbital period</strong> of a satellite orbiting Earth using <strong>Newtonian Gravity</strong> and <strong>Kepler’s Third Law</strong>.</p>
-<hr/>
+<h2 id="motivation">Motivation</h2>
+<p>The relationship between the <strong>square of the orbital period</strong> and the <strong>cube of the orbital radius</strong>, known as <strong>Kepler's Third Law</strong>, is a cornerstone of celestial mechanics.</p>
+<p>This profound yet simple law:</p>
+<ul>
+<li>Helps determine how planets move,</li>
+<li>Supports the calculation of satellite orbits,</li>
+<li>Applies to everything from moons to galaxies.</li>
+</ul>
+<p>Understanding and verifying this relationship helps connect <strong>gravity’s core principles</strong> to real-world phenomena such as <strong>planetary systems</strong>, <strong>GPS networks</strong>, and <strong>space missions</strong>.</p>
 <h2 id="theoretical-background">Theoretical Background</h2>
-<h3 id="1-gravitational-force-provides-the-centripetal-force">1. <strong>Gravitational Force Provides the Centripetal Force</strong></h3>
+<h3 id="1-newtons-universal-law-of-gravitation">1. <strong>Newton's Universal Law of Gravitation</strong></h3>
 <p>A satellite remains in orbit because gravity supplies the exact force needed to keep it moving in a circular path:</p>
 <div class="arithmatex">\[
 \frac{G M m}{r^2} = \frac{m v^2}{r}
 \]</div>
 <ul>
-<li>$ G $: Gravitational constant</li>
-<li>$ M $: Mass of Earth</li>
-<li>$ m $: Mass of satellite</li>
-<li>$ r $: Distance from Earth’s center (orbital radius)</li>
-<li>$ v $: Orbital speed</li>
+<li><span class="arithmatex">\(G\)</span>: Gravitational constant</li>
+<li><span class="arithmatex">\(M\)</span>: Mass of Earth</li>
+<li><span class="arithmatex">\(m\)</span>: Mass of satellite</li>
+<li><span class="arithmatex">\(r\)</span>: Distance from Earth’s center (orbital radius)</li>
+<li><span class="arithmatex">\(v\)</span>: Orbital speed</li>
 </ul>
 <hr/>
 <h3 id="2-orbital-velocity">2. <strong>Orbital Velocity</strong></h3>
-<p>Solving for velocity:</p>
+<p>In circular orbits, gravity provides the <strong>centripetal force</strong> to keep an object moving in a circle:</p>
 <div class="arithmatex">\[
-v = \sqrt{\frac{G M}{r}}
+\frac{G M m}{r^2} = \frac{m v^2}{r}
+\Rightarrow v = \sqrt{\frac{G M}{r}}
 \]</div>
-<p>This is the speed needed for a stable circular orbit.</p>
 <hr/>
 <h3 id="3-orbital-period">3. <strong>Orbital Period</strong></h3>
-<p>The time for one full revolution is:</p>
+<p>From velocity and distance:</p>
 <div class="arithmatex">\[
 T = \frac{2\pi r}{v} = 2\pi \sqrt{\frac{r^3}{G M}}
 \]</div>
-<p>This shows that the orbital period depends on the <strong>cube of the radius</strong>.</p>
+<p>So we get:</p>
+<div class="arithmatex">\[
+T^2 = \frac{4\pi^2}{G M} \cdot r^3
+\Rightarrow T^2 \propto r^3
+\]</div>
+<p>This is <strong>Kepler’s Third Law</strong> derived from <strong>Newtonian Mechanics</strong>.</p>
 <hr/>
 <h2 id="keplers-third-law-of-planetary-motion">Kepler’s Third Law of Planetary Motion</h2>
 <blockquote>
@@ -301,23 +318,29 @@ plt.tight_layout()
 <ul>
 <li>The orbital period grows <strong>non-linearly</strong> with radius.</li>
 <li>This relationship reflects <strong>Kepler’s Third Law</strong>:
-  $ T^2 \propto r^3 $</li>
+  <span class="arithmatex">\(T^2 \propto r^3\)</span></li>
 <li>Farther orbits take longer to complete.</li>
 <li>Newton’s gravity gives the <strong>mechanism</strong>, and Kepler gives the <strong>relationship</strong>.</li>
 </ul>
 <hr/>
-<h2 id="real-world-relevance">Real-World Relevance</h2>
+<h2 id="real-world-examples">Real-World Examples</h2>
+<h3 id="moon-orbiting-earth">Moon orbiting Earth</h3>
 <ul>
-<li>🛰️ Satellite network design (e.g., Starlink, GPS)</li>
-<li>🌌 Planetary system modeling</li>
-<li>🚀 Space exploration route planning</li>
-<li>📡 Geostationary vs. polar orbits</li>
+<li>Radius: ~384,000 km</li>
+<li>Period: ~27.3 days</li>
+</ul>
+<p>Inserting values confirms:<br/>
+<span class="arithmatex">\(<span class="arithmatex">\(T^2 \propto r^3\)</span>\)</span></p>
+<h3 id="planets-in-the-solar-system">Planets in the Solar System</h3>
+<p>Use AU and years:</p>
+<ul>
+<li>Earth: <span class="arithmatex">\(r = 1 \, \text{AU}, T = 1 \, \text{year}\)</span></li>
+<li>Mars: <span class="arithmatex">\(r = 1.52 \, \text{AU} \Rightarrow T \approx 1.88 \, \text{years}\)</span></li>
+<li>Jupiter: <span class="arithmatex">\(r = 5.2 \, \text{AU} \Rightarrow T \approx 11.86 \, \text{years}\)</span></li>
 </ul>
 <hr/>
 <h2 id="conclusion">Conclusion</h2>
 <p>By analyzing this relationship, we connect gravity’s fundamental principles with real-world technologies and cosmic dynamics. Kepler’s Law is not just a historical observation — it’s a <strong>practical tool</strong> for understanding and shaping the universe.</p>
-<pre><code>
-</code></pre>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
