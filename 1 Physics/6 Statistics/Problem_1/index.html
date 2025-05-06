@@ -174,45 +174,65 @@
 <h1 id="problem-1">Problem 1</h1>
 <h1 id="exploring-the-central-limit-theorem-through-simulations">Exploring the Central Limit Theorem Through Simulations</h1>
 <h2 id="motivation">Motivation</h2>
-<p>The <strong>Central Limit Theorem (CLT)</strong> is a fundamental result in probability and statistics. It states that, for a sufficiently large sample size, the sampling distribution of the sample mean becomes approximately normal, regardless of the original population distribution. This concept is essential in:</p>
+<p>The <strong>Central Limit Theorem (CLT)</strong> is one of the most important theorems in probability and statistics. It states that the distribution of the sample mean of a sufficiently large number of independent and identically distributed (i.i.d.) random variables, each with finite mean and variance, will approximate a <strong>normal distribution</strong>, regardless of the original population's shape.</p>
+<p>This result is fundamental because it justifies the widespread use of the normal distribution in statistical inference, even when the underlying data is not normally distributed.</p>
+<p>The CLT provides the theoretical foundation for many practical applications:</p>
 <ul>
-<li>Estimating population parameters from sample data.</li>
-<li>Designing statistical quality control systems.</li>
-<li>Modeling aggregate outcomes in finance and economics.</li>
+<li>Estimating population means and constructing confidence intervals</li>
+<li>Quality control and process monitoring</li>
+<li>Risk modeling in economics and finance</li>
+<li>Evaluating the precision of simulations and forecasts</li>
 </ul>
-<p>Simulations offer an intuitive, visual way to see the CLT in action and understand its power in real-world contexts.</p>
+<p>Simulations allow us to witness the CLT in action — transforming abstract theory into concrete, visual understanding.</p>
 <hr/>
 <h2 id="objective">Objective</h2>
 <ul>
-<li>Demonstrate the Central Limit Theorem using simulations.</li>
-<li>Show how the sample mean distribution evolves as sample size increases.</li>
-<li>Compare the rate of convergence for different population distributions.</li>
-<li>Visualize results to build a strong conceptual understanding.</li>
+<li>Demonstrate the Central Limit Theorem using computational simulations.</li>
+<li>Show how the distribution of sample means becomes increasingly normal as sample size grows.</li>
+<li>Compare the convergence behavior across different types of population distributions.</li>
+<li>Reinforce understanding through visualization and empirical evidence.</li>
 </ul>
+<hr/>
+<h2 id="theoretical-background">Theoretical Background</h2>
+<p>Let $X_1, X_2, \dots, X_n $ be i.i.d. random variables drawn from a population with mean $\mu $ and finite variance <span class="arithmatex">\(\sigma^2\)</span>. The CLT states that the sample mean:</p>
+<div class="arithmatex">\[
+\bar{X}_n = \frac{1}{n} \sum_{i=1}^n X_i
+\]</div>
+<p>will, as <span class="arithmatex">\( n \to \infty \)</span>, follow a normal distribution:</p>
+<div class="arithmatex">\[
+\bar{X}_n \xrightarrow{d} \mathcal{N}(\mu, \frac{\sigma^2}{n})
+\]</div>
+<p>This means:</p>
+<ul>
+<li>The <strong>mean</strong> of the sampling distribution remains <span class="arithmatex">\( \mu \)</span></li>
+<li>The <strong>variance</strong> decreases with <span class="arithmatex">\( n \)</span>, improving estimation precision</li>
+<li>The <strong>shape</strong> of the sampling distribution approaches normality</li>
+</ul>
+<p>The speed of this convergence depends on the <strong>skewness and kurtosis</strong> of the original population distribution. Symmetric distributions (like Uniform) converge faster; skewed distributions (like Exponential) converge more slowly.</p>
 <hr/>
 <h2 id="methodology">Methodology</h2>
 <ol>
 <li>
-<p>Select multiple population distributions:</p>
+<p><strong>Choose population distributions</strong> with distinct properties:</p>
 </li>
 <li>
-<p>Uniform(0, 1)</p>
+<p><strong>Uniform(0, 1)</strong> — symmetric, bounded</p>
 </li>
-<li>Exponential(λ = 1)</li>
+<li><strong>Exponential(λ = 1)</strong> — highly skewed, non-symmetric</li>
 <li>
-<p>Binomial(n = 10, p = 0.5)</p>
-</li>
-<li>
-<p>For each distribution:</p>
+<p><strong>Binomial(n = 10, p = 0.5)</strong> — discrete, moderately symmetric</p>
 </li>
 <li>
-<p>Generate 1000 sample means for each sample size: 5, 10, 30, 50</p>
+<p><strong>Simulate sampling distributions</strong>:</p>
 </li>
 <li>
-<p>Plot histograms of the sampling distributions</p>
+<p>For each distribution, generate 1000 sample means for varying sample sizes: 5, 10, 30, 50</p>
 </li>
 <li>
-<p>Observe the shape of these histograms as the sample size increases.</p>
+<p>Use histograms to visualize the distribution of sample means</p>
+</li>
+<li>
+<p><strong>Observe the effect of increasing sample size</strong> on the shape of the sampling distribution.</p>
 </li>
 </ol>
 <hr/>
@@ -248,28 +268,65 @@ for dist_name, dist_func in distributions.items():
 <p><img alt="Output" src="../CLT.png"/>
 <img alt="Output" src="../CLT1.png"/>
 <img alt="Output" src="../CLT%20Binomia.png"/></p>
+<hr/>
 <h2 id="interpretation-and-observations">Interpretation and Observations</h2>
-<p>Small sample sizes retain the shape of the parent distribution.</p>
-<p>Larger samples result in more normally distributed sample means.</p>
-<p>The rate of convergence depends on how skewed the original population is:</p>
 <ul>
+<li><strong>Small sample sizes</strong> tend to preserve the shape of the original population distribution.</li>
+<li>As <strong>sample size increases</strong>, the sampling distribution of the sample mean becomes increasingly bell-shaped and symmetric.</li>
 <li>
-<p>Uniform → Fast convergence</p>
+<p>The <strong>rate of convergence</strong> to normality varies across distributions:</p>
 </li>
 <li>
-<p>Exponential → Slower convergence due to skew</p>
+<p><strong>Uniform(0, 1)</strong>:<br/>
+    Converges rapidly due to symmetry and bounded support.</p>
 </li>
 <li>
-<p>Binomial → Intermediate, depending on parameters</p>
+<p><strong>Exponential(λ = 1)</strong>:<br/>
+    Converges more slowly due to strong right skew and infinite tail.</p>
+</li>
+<li>
+<p><strong>Binomial(n = 10, p = 0.5)</strong>:<br/>
+    Convergence depends on the binomial distribution’s shape — fastest when symmetric (p = 0.5).</p>
 </li>
 </ul>
+<p>These results align with the <strong>Central Limit Theorem</strong>, which predicts that the distribution of sample means will tend toward normality as sample size increases, regardless of the original distribution.</p>
+<hr/>
 <h2 id="real-world-applications">Real-World Applications</h2>
-<p>Quality Control: Sampling the mean output of machines to monitor defects.</p>
-<p>Polls and Surveys: Estimating the population average from a sample.</p>
-<p>Risk Analysis: Modeling uncertainty in financial returns and projections.</p>
+<ul>
+<li>
+<p><strong>Quality Control</strong>:<br/>
+  Monitoring average dimensions or weights in manufacturing to detect defects.</p>
+</li>
+<li>
+<p><strong>Surveys and Polling</strong>:<br/>
+  Estimating average opinions, behaviors, or characteristics of a population from sample data.</p>
+</li>
+<li>
+<p><strong>Finance and Insurance</strong>:<br/>
+  Modeling aggregated risk, claims, or investment returns assuming normal approximation.</p>
+</li>
+<li>
+<p><strong>Medical Research</strong>:<br/>
+  Estimating mean treatment effects and evaluating clinical trial outcomes.</p>
+</li>
+</ul>
+<hr/>
 <h2 id="conclusion">Conclusion</h2>
-<p>The Central Limit Theorem demonstrates the power of aggregation. No matter the population's shape, the average of many samples behaves predictably. This allows for robust inference and underpins much of statistical theory and practice.</p>
-<p>Simulations help internalize this principle and appreciate its relevance to nearly every field involving data.</p>
+<p>The <strong>Central Limit Theorem (CLT)</strong> is a cornerstone of modern statistics. It explains why normal distributions are so commonly used, even when underlying data are not normally distributed.</p>
+<p>By simulating the CLT across various population distributions, we observe:</p>
+<ul>
+<li>The <strong>robustness</strong> of the CLT across different shapes</li>
+<li>The <strong>predictable behavior</strong> of sample means under repeated sampling</li>
+<li>The <strong>importance of sample size</strong> for statistical inference</li>
+</ul>
+<p>Even when the population is skewed or discrete, the sampling distribution of the mean becomes increasingly normal with larger sample sizes.</p>
+<p>The CLT enables us to:</p>
+<ul>
+<li>Use the normal distribution to make probability-based predictions</li>
+<li>Construct confidence intervals</li>
+<li>Perform hypothesis testing</li>
+</ul>
+<p>In sum, simulations transform abstract statistical theory into a powerful, intuitive understanding — and highlight why the CLT is essential across science, engineering, economics, and beyond.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
