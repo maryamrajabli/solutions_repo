@@ -30,7 +30,7 @@ Simulations allow us to witness the CLT in action — transforming abstract theo
 
 ## Theoretical Background
 
-Let $X_1, X_2, \dots, X_n $ be i.i.d. random variables drawn from a population with mean $\mu $ and finite variance $\sigma^2$. The CLT states that the sample mean:
+Let $X_1, X_2, \dots, X_n$ be i.i.d. random variables drawn from a population with mean $\mu$ and finite variance $\sigma^2$. The CLT states that the sample mean:
 
 $$
 \bar{X}_n = \frac{1}{n} \sum_{i=1}^n X_i
@@ -44,8 +44,8 @@ $$
 
 This means:
 
-- The **mean** of the sampling distribution remains \( \mu \)
-- The **variance** decreases with \( n \), improving estimation precision
+- The **mean** of the sampling distribution remains $\mu$
+- The **variance** decreases with $n$, improving estimation precision
 - The **shape** of the sampling distribution approaches normality
 
 The speed of this convergence depends on the **skewness and kurtosis** of the original population distribution. Symmetric distributions (like Uniform) converge faster; skewed distributions (like Exponential) converge more slowly.
